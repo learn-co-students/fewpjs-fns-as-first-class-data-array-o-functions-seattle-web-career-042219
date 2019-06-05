@@ -34,7 +34,7 @@ function unleashDog(dogName, dogBreed) {
   return string;
 }
 
-let routine = [
+const routine = [
   wakeDog,
   leashDog,
   walkToPark,
@@ -44,9 +44,5 @@ let routine = [
 ];
 
 function exerciseDog(dogName, dogBreed) {
-  let arr = [];
-  routine.forEach(function(element) {
-    arr.push(element(dogName, dogBreed));
-  });
-  return arr;
+  return routine.map(x => x(dogName, dogBreed));
 }
