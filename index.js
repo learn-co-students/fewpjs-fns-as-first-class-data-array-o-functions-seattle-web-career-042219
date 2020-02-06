@@ -1,39 +1,41 @@
 function wakeDog(dogName, dogBreed) {
-  console.log(`Wake ${dogName} the ${dogBreed}`);
-  return `Wake ${dogName} the ${dogBreed}`;
-}
+  let phrase = `Wake ${dogName} the ${dogBreed}`;
+  // console.log(phrase);
+  return phrase;
+};
 
 function leashDog(dogName, dogBreed) {
-  console.log(`Leash ${dogName} the ${dogBreed}`);
-  return `Leash ${dogName} the ${dogBreed}`;
-}
+  let phrase = `Leash ${dogName} the ${dogBreed}`;
+  // console.log(phrase);
+  return phrase;
+};
 
 function walkToPark(dogName, dogBreed) {
-  console.log(`Walk to the park with ${dogName} the ${dogBreed}`);
-  return `Walk to the park with ${dogName} the ${dogBreed}`;
-}
+  let phrase = `Walk to the park with ${dogName} the ${dogBreed}`;
+  // console.log(phrase);
+  return phrase;
+};
 
 function throwFrisbee(dogName, dogBreed) {
-  console.log(`Throw the frisbee for ${dogName} the ${dogBreed}`);
-  return `Throw the frisbee for ${dogName} the ${dogBreed}`;
-}
+  let phrase = `Throw the frisbee for ${dogName} the ${dogBreed}`;
+  // console.log(phrase);
+  return phrase;
+};
 
 function walkHome(dogName, dogBreed) {
-  console.log(`Walk home with ${dogName} th ${dogBreed}`);
-  return `Walk home with ${dogName} the ${dogBreed}`;
-}
+  let phrase = `Walk home with ${dogName} the ${dogBreed}`;
+  // console.log(phrase);
+  return phrase;
+};
 
 function unleashDog(dogName, dogBreed) {
-  console.log(`Unleash ${dogName} the ${dogBreed}`);
-  return `Unleash ${dogName} the ${dogBreed}`;
-}
+  let phrase = `Unleash ${dogName} the ${dogBreed}`;
+  // console.log(phrase);
+  return phrase;
+};
 
-let routine = [wakeDog, leashDog, walkToPark, throwFrisbee, walkHome, unleashDog];
+const routine = [wakeDog, leashDog, walkToPark, throwFrisbee, walkHome, unleashDog];
 
 function exerciseDog(dogName, dogBreed) {
-   let arr = [];
-  routine.forEach(function(f) {
-    arr.push(f(dogName, dogBreed));
-  })
-  return arr;
+  return routine.map(x => x(dogName, dogBreed));
 }
